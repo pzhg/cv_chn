@@ -1,0 +1,774 @@
+%%% LaTeX Template: Curriculum Vitae
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com
+%%% Date: July 2011
+
+%%% ------------------------------------------------------------
+%%% BEGIN PREAMBLE
+%%% ------------------------------------------------------------
+\documentclass[paper=a4,fontsize=11pt]{scrartcl}	
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage[boldfont,slantfont,CJKchecksingle]{xeCJK}
+
+							
+%\usepackage[english]{babel}
+%\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[top=15ex, bottom=15ex, left=15ex, right=15ex]{geometry}
+%	\textheight=700px
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage{url}
+
+\frenchspacing
+\pagestyle{empty}		% No pagenumbers/headers/footers
+%\usepackage{bbding}	% Symbols
+
+
+\usepackage{sectsty}	% Custom sectioning
+
+\sectionfont{%			% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%			% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{1.5pt}
+	}
+
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 		% Name
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1} % Slogan (optional)
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\TableEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 	% Indentation
+		\parbox{\spacebox}{
+		\textit{#1}}							% Title (birth, address, skills, etc.)
+		\hspace{1.5em} #2 \par}					% Entry
+
+\newcommand{\DetailEntry}[4]{
+		\noindent \hangindent=2em\hangafter=0 \textbf{#1} \hfill 	% Title
+		\colorbox{Grey}{%
+			\parbox{8.1em}{%
+			\hfill\color{White}#2}} \par						% Time
+		\vspace{0.2em}
+		\noindent \hangindent=3em\hangafter=0\textit{#3} \par		% Place, School, Company, etc.
+		\noindent\hangindent=3em\hangafter=0 \small #4 			% Description
+		\normalsize \par}
+
+\newcommand{\BasicEntry}[3]{
+		\noindent \hangindent=2em\hangafter=0 \textbf{#1} \hfill 	% Title
+		\colorbox{Grey}{%
+			\parbox{8.1em}{%
+			\hfill\color{White}#2}} \par						% Time
+		\vspace{0.2em}
+		\noindent\hangindent=3em\hangafter=0 \small #3 			% Description
+		\normalsize \par}
+
+\newcommand{\SimpleEntry}[2]{
+		\noindent \hangindent=2em\hangafter=0 {#1} \hfill 	% Description
+		\colorbox{Grey}{%
+			\parbox{3.6em}{%
+			\hfill\color{White}#2}} \par					% Time
+		\normalsize \par}
+
+\newcommand{\WordsEntry}[1]{
+		\noindent \hangindent=2em\hangafter=0 {#1} \hfill 	% Words
+		\normalsize \par}
+
+%\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}
+%% \setCJKmainfont[BoldFont={Adobe Heiti Std}, ItalicFont={Adobe Kaiti Std}]{Adobe Song Std}
+%\setCJKsansfont{SimSun}
+%% \setCJKsansfont{Adobe Song Std}
+%\setCJKmonofont{SimSun}
+%% \setCJKmonofont{Adobe Fangsong Std}
+%
+%\setCJKfamilyfont{zhsong}{SimSun}
+%% \setCJKfamilyfont{zhsong}{Adobe Song Std}
+%\setCJKfamilyfont{zhhei}{SimHei}
+%% \setCJKfamilyfont{zhhei}{Adobe Heiti Std}
+%\setCJKfamilyfont{zhfs}{FangSong_GB2312}
+%% \setCJKfamilyfont{zhfs}{Adobe Song Std}
+%\setCJKfamilyfont{zhkai}{KaiTi}
+%% \setCJKfamilyfont{zhkai}{Adobe Kaiti Std}
+%
+%\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+%\newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
+%\newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+%\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+%
+%\setmainfont[Mapping=tex-text]{TeX Gyre Pagella} % 使用 XeTeX 的 text-mapping 方案，正确显示 LaTeX 样式的双引号（`` ''）
+%% \setmainfont[Mapping=tex-text]{Palatino Linotype}
+%\setsansfont[Mapping=tex-text]{TeX Gyre Pagella}
+%% \setsansfont[Mapping=tex-text]{DejaVu Sans YuanTi}
+%\setmonofont{Consolas}
+%%% ------------------------------------------------------------
+%%% BEGIN DOCUMENT
+%%% ------------------------------------------------------------
+
+\begin{document}
+%\begin{wrapfigure}{l}{0.5\textwidth}						%Insert a picture if needed
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{picture}
+%\end{wrapfigure}
+
+\MyName{张~柘 (Zhe Zhang)}
+%\MySlogan{{研究员, 博士生导师, 海外优青, 中科院``百人计划'', 苏州市``姑苏领军人才''}}
+
+\sepspace
+
+
+\begin{tabular}{rl}
+	& \textbf{研究员, 博士生导师, 海外优青, 中科院``百人计划'', 苏州市``姑苏领军人才''} \\
+	& \textbf{Professor, Ph.D. Supervisor} \\
+	~&~\\
+\textsc{Sex:} & 男 (M) \\
+\textsc{DOB:} & 01/31/1988 \\
+%\textsc{Place of birth:} & Luoyang, China \\
+\textsc{Address:} &  Room B203-12, Lab 22 \\
+	& Aerospace Information Research Institute, Chinese Academy of Sciences, Suzhou \\
+	& 158 Dushuhu Ave, Suzhou Industrial Park, Suzhou, Jiangsu 215000, China \\
+\textsc{Tel:} & +86-512-69836908; +86-13466717625; +1-(202)531-7210\\
+\textsc{Email:} & \href{mailto:zhangzhe01@aircas.ac.cn}{zhangzhe01@aircas.ac.cn}; \href{mailto:nagatokana@gmail.com}{nagatokana@gmail.com} \\
+\textsc{Homepage:} & \href{https://people.ucas.ac.cn/~zhe}{https://people.ucas.ac.cn/{\textasciitilde}zhe}.
+%\textsc{Google scholar:} & \href{https://scholar.google.com/citations?hl=en\&user=dsDkKTkAAAAJ}{https://scholar.google.com/citations?hl=en\&user=dsDkKTkAAAAJ}
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	WORKING
+%----------------------------------------------------------------------------------------
+
+\section*{Working Experience (工作经历)}
+
+\begin{tabular}{r|p{12cm}}
+	
+\emph{2022.04--} & Professor (研究员), Ph.D Supervisor (博士生导师)\\	
+\emph{2021.01--2022.04} & Associate Professor (副研究员, ``百人计划''创新研究员), 硕士生导师\\	
+	& \normalsize\textbf{Aerospace Information Research Institute, CAS, Suzhou}\\
+	& \normalsize\textbf{中国科学院空天信息创新研究院~苏州研究院} \\
+	& \normalsize\textbf{苏州空天信息研究院}, Suzhou, Jiangsu 215000, China\\
+%	& Excellent Young Scienctists Fund (Overseas) / {国家优青(海外)}\\
+%	& CAS One Hundred Talent / {中国科学院``百人计划''}\\
+%	& Gusu Leading Talent / {姑苏领军人才}\\
+	& \emph{研究方向: 稀疏信号处理, 稀疏微波成像, 合成孔径雷达,}\\
+	& \emph{~~~~~~~~~~~~~~三维成像, 深度学习与信号处理的结合, 机器学习.} \\
+	%  & Project: ``Error Analysis in Sparse Signal Processing and Synthetic Aperture Sonar'' \\
+	\multicolumn{2}{c}{} \\
+
+%\emph{2022.07--} & External Mentor (校外导师)\\		
+%& \normalsize\textbf{Xi'an Jiaotong Liverpool University}, Suzhou, China\\
+%\multicolumn{2}{c}{} \\
+
+\emph{2016.12--2020.06} & Post-Doctoral Research Fellow (博士后研究员)\\
+& \normalsize\textbf{George Mason University}, Fairfax, VA 22030, USA\\
+& Advisor: Tian, Zhi (田智), Professor, IEEE Fellow \\
+& \emph{研究方向: 稀疏信号处理，原子范数优化，深度学习与信号处理的结合.} \\
+%  & Project: ``Error Analysis in Sparse Signal Processing and Synthetic Aperture Sonar'' \\
+	\multicolumn{2}{c}{} \\
+
+
+  \emph{2015.12--2016.11} & Post-Doctoral Research Scientist (博士后研究员)\\
+  & \normalsize\textbf{George Washington University}, Washington, DC 20052, USA\\
+  & Advisor: Tian, Zhi (田智), Professor, IEEE Fellow \\
+  & ~~~~~~~~~~~~~Cheng, Xiuzhen (成秀珍), Professor, IEEE Fellow \\
+  & \emph{研究方向: 稀疏信号处理, 原子范数优化.}\\
+%  & Project: ``Error Analysis in Sparse Signal Processing and Synthetic Aperture Sonar'' \\
+%\multicolumn{2}{c}{} \\
+
+%  \emph{2006.04--2015.12} & 技术站长\\
+%& \normalsize\textbf{西安交通大学兵马俑BBS}\\
+%%  & Project: ``Error Analysis in Sparse Signal Processing and Synthetic Aperture Sonar'' \\
+%\multicolumn{2}{c}{} \\
+%
+%  \emph{2010.06--2019.02} & 技术站长\\
+%& \normalsize\textbf{中国科学院科苑星空BBS}\\
+%%  & Project: ``Error Analysis in Sparse Signal Processing and Synthetic Aperture Sonar'' \\
+	
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section*{Education (教育经历)}
+
+\begin{tabular}{r|p{12cm}}	
+	\emph{2009.09--2015.07} & \textsc{Ph.D.} (工学博士) / \textsc{信号与信息处理} \\
+	& \normalsize\textbf{Institute of Electronics, Chinese Academy of Sciences} \\
+	& \normalsize\textbf{University of Chinese Academy of Sciences}\\
+	& \normalsize\textbf{中国科学院电子学研究所 / 中国科学院大学}, Beijing 100190, China\\
+	%  & \normalsize \textsc{Gpa}: 3.7/4.0\\ 
+	& Supervisor: 吴一戎, 中国科学院院士, 研究员 \\
+	& \emph{研究方向: 稀疏微波成像, 稀疏信号处理, 合成孔径雷达.} \\
+	%  & \\
+	\multicolumn{2}{c}{} \\
+	
+		\emph{2014.01--2014.04} & \textsc{Visiting Student} (访问学生)\\
+	& \normalsize\textbf{University of Connecticut}, Storrs, CT 06269, USA\\
+	& Supervisor: Zhou, Shengli (周胜利), Professor, IEEE Fellow. \\
+%	\multicolumn{2}{c}{} \\
+	
+\end{tabular}
+
+%\newpage
+\section*{Education Cont. (教育经历)}
+\begin{tabular}{r|p{12cm}}	
+	%------------------------------------------------
+	
+
+
+
+	\emph{2004.09--2008.07} & \textsc{B. Eng.} (工学学士) \textsc{/ 信息工程}，\emph{电子与信息工程学院} \\
+%	& \emph{电子与信息工程学院}\\
+		\emph{2003.09--2004.07} & \textsc{Special Class for Gifted Young} \textbf{(少年班)} \\
+	& \normalsize\textbf{Xi'an Jiaotong University} \\
+	& \normalsize\textbf{西安交通大学}, Xi'an, Shaanxi 710049, China.\\
+	%  & \normalsize \textsc{Gpa}: 3.4/4.0\\
+%	\multicolumn{2}{c}{} \\
+%	
+%	%%------------------------------------------------
+%	
+%	\emph{2003.09--2004.07} & \textsc{}\textsc{少年班} \\
+%	  & \normalsize\textbf{西安交通大学}, Xi'an, China
+
+%------------------------------------------------
+
+
+
+\end{tabular}
+
+
+\section*{Research Projects (研究经历)}
+
+\begin{tabular}{r|p{12cm}}
+	
+	\emph{2022.1--} & \textbf{稀疏信号处理及其在微波成像中的应用研究}, 300万元 \\
+	& 资助： \emph{国家自然科学基金 (NSFC) 优秀青年科学基金 (海外)}\\
+	% & Key research member \\
+	& \textbf{项目主持人}.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2021.1--} & \textbf{稀疏信号处理与深度学习及其在微波成像中的应用}, 400万元 \\
+	& 资助： \emph{中国科学院``百人计划''}\\
+	% & Key research member \\
+	& \textbf{项目主持人}.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2021.12--} & \textbf{微波三维成像的高效感知系统与技术的研发}，50万元 \\
+	& 资助： \emph{苏州市科技发展项目}, \#ZXL2022381\\
+	% & Key research member \\
+	& \textbf{项目主持人}.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2023.1--} & \textbf{＊＊＊＊＊＊＊SAR成像处理与信息提取}，200万元 \\
+	& 资助： \emph{中国科学院＊＊＊＊＊＊重点部署项目}\\
+	% & Key research member \\
+	& \textbf{课题负责人}.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2021.7--} & \textbf{结构信号的自适应高效感知理论及在微波成像中的应用}，130万元 \\
+	& 资助： \emph{中科院空天院前沿科学与颠覆性先导专项}\\
+	% & Key research member \\
+	& \textbf{项目主持人}.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2023.1--} & \textbf{＊＊＊＊＊＊＊＊星载SAR系统技术}，1.06亿元 \\
+	& 资助： \emph{KJW＊＊＊＊创新特区重点项目}\\
+	% & Key research member \\
+	& \textbf{项目核心参与人, 处理系统负责人}.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2023.1--} & \textbf{合成孔径雷达微波视觉三维成像理论与应用基础研究}，500万元 \\
+	& 资助： \emph{KJW＊＊＊＊基础加强课题}\\
+	% & Key research member \\
+	& \textbf{子课题负责人}.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2020.1--} & \textbf{街角盲区建筑布局重建机理与方法}，2000万元 \\
+	& 资助： \emph{国家自然科学基金 (NSFC) 重大项目}， \#61991421, 61991420\\
+	% & Key research member \\
+	& \textbf{子课题负责人}.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2018.8--2018.11} & \textbf{A Gated LFMCW TDMA MIMO SAR based Hidden Chamber Detector}，15万美元 \\
+	& 资助： \emph{USSOCOM SBIR}， \#S173-004-0118\\
+	% & Key research member \\
+	& 信号处理及仿真负责人.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2015.12--2020.6} & \textbf{Task-Cognizant Sparse Sensing for Inference}，40万美元 \\
+	& 资助： \emph{National Science Foundation (NSF) Standard Grant}, \#1527396\\
+	% & Key research member \\
+	& 参与.\\
+	
+\end{tabular}
+
+\section*{Research Projects Cont. (研究经历)}
+
+\begin{tabular}{r|p{12cm}}
+	
+	% : CIF: Small: Task-Cognizant Sparse Sensing for Inference
+	%------------------------------------------------
+	
+	
+	\emph{2010.04--2015.07} & \textbf{稀疏微波成像的理论、体制和方法研究}，3300万元 \\
+	& 资助： \emph{国家重大基础科学研究计划 (973计划)}, \#2010CB731900\\
+	& 机载部分负责人.\\
+	% & Key research member \\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2012.04--2015.07} & \textbf{先进微波探测与信息处理}，430万元 \\
+	& 资助： \emph{中国科学院} / \emph{国家外国专家局 ``创新团队''合作伙伴计划}\\
+	& 核心参与人.\\
+	%	\multicolumn{2}{c}{} \\
+	%	
+	%	%------------------------------------------------
+	%	
+	%	\emph{2007.09--2008.07} & \textbf{矢量量化技术的研究与应用} \\
+	%	& 资助： \emph{国家自然科学基金 (NSFC)}\\
+	%	& 参与.\\
+	%	% & Research member \\
+	%	
+	%	%------------------------------------------------
+	
+\end{tabular}
+
+\section*{Honors (荣誉)}
+
+\begin{tabular}{r|p{11cm}}
+	
+	\emph{2022.01} & 国家优秀青年基金 (海外) / \emph{国家自然科学基金委员会 (NSFC)}\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2021.01} & 中国科学院``百人计划'' / \emph{中国科学院}\\
+	\multicolumn{2}{c}{} \\
+	
+	
+	\emph{2021.12} & 苏州市``姑苏领军人才'' / \emph{苏州市}\\
+%	\multicolumn{2}{c}{} \\
+	
+	%------------------------------------------------
+	
+\end{tabular}
+
+
+\section*{Awards (获奖)}
+
+\begin{tabular}{r|p{11cm}}
+	
+	~ & 全国颠覆性技术创新大赛 / \emph{中华人民共和国科技部}\\
+	\emph{2022.03} & \emph{总决赛优秀奖}\\
+	\emph{2021.12} & \emph{优胜奖}\\
+	\emph{2021.12} & \emph{优秀奖}\\
+	\multicolumn{2}{c}{} \\
+	
+	%	\emph{2019.10} & ISGC Student Travel Awards \\
+	%	\multicolumn{2}{c}{} \\
+	
+	
+	\emph{2008.04} & 德州仪器(TI) DSP大奖赛 / \emph{Texas Instruments} \\
+	& \emph{优胜奖}\\
+	\multicolumn{2}{c}{} \\
+	
+	%------------------------------------------------
+	
+	~ & 美国大学生数学建模竞赛 / \emph{COMAP}\\
+	\emph{2008.02} & \emph{一等奖}\\
+	
+	%------------------------------------------------
+	
+	\emph{2007.02} 	& \emph{二等奖}\\
+	\multicolumn{2}{c}{} \\
+	
+	%------------------------------------------------
+	
+	\emph{2006.09} & 中国大学生数学建模竞赛 / \emph{中国工业与应用数学学会(CSIAM)}\\
+	& \emph{二等奖}\\
+%	\multicolumn{2}{c}{} \\
+	
+	%------------------------------------------------
+	
+\end{tabular}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS 
+%----------------------------------------------------------------------------------------
+
+\section*{Professional Skills (专业技能)}
+
+\begin{tabular}{rl}
+
+专业方向: & 深度学习/AI, 机器学习与信号处理方法的结合, 稀疏信号处理与低秩优化,\\
+		 & 合成孔径雷达.\\
+
+~
+
+专业技能: & 大型在线社区开发、运营与维护, Linux运维, GNU工具链, \LaTeX.\\
+ 	& MATLAB, C/C++/Python/JavaScript.
+\end{tabular}
+%----------------------------------------------------------------------------------------
+%	SCHOLARSHIPS AND ADDITIONAL INFO
+%----------------------------------------------------------------------------------------
+
+\section*{Languages (语言)}
+
+\begin{tabular}{ll}
+	
+	\textsc{English:} & Professional  (Reside in US for 5 years, CET-6/PETS-5/WSK pass, TOEFL 96) \\
+	
+	\textsc{Japanese:} & Fair\\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS AND ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+\section*{Hobbies (兴趣)}
+
+IT, 开源, 编程, Linux, 数码, 互联网.\\
+音乐, 动漫, 历史, 常旅客.\\
+
+\section*{Open Source Projects and Services (主持开源项目)}
+
+\begin{tabular}{r|p{11cm}}
+	\emph{2006.04--2015.11} & 兵马俑BBS (\href{http://bbs.xjtu.edu.cn/}{http://bbs.xjtu.edu.cn/}, \href{http://bmybbs.com/}{http://bmybbs.com/}) \\
+	& Host： \href{https://github.com/bmybbs?type=source}{https://github.com/bmybbs?type=source} \\
+	& \emph{Technical Leader} \\ 
+	& \footnotesize{兵马俑BBS是中国教育网最大的BBS站点之一, 属于西安交通大学. 兵马俑BBS服务50000多名用户, 同时在线数最高5000. 项目代码超过10万行.}\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2010.06--2019.04} & 科苑星空BBS (\href{http://bbs.ucas.ac.cn/}{http://bbs.ucas.ac.cn/}, \href{http://kyxk.net/}{http://kyxk.net/}) \\
+	& \emph{Technical Leader} \\ 
+	& \footnotesize{科苑星空BBS是中国科学院的官方社区. 科苑星空BBS服务30000多名用户, 同时在线数最高1500. 项目代码超过12万行.}\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2018.09--} & hCNN (\href{https://github.com/pzhg/hCNN}{https://github.com/pzhg/hCNN}) \\
+	& \emph{Principle Developer} \\ 
+	& \footnotesize{hCNN是一个开源的、深度学习与信号处理结合的开发框架, 可方便的进行深度学习开发与训练, 并与传统信号处理方法兼容.}\\
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+%	SCHOLARSHIPS AND ADDITIONAL INFO
+%----------------------------------------------------------------------------------------
+
+%\section*{Scholarships}
+%
+%\begin{tabular}{rl}
+%2004 & Freshman Scholarship with First Level\\
+%
+%2007 & Siyuan Scholarship of Xi'an Jiaotong University\\
+%
+%2013 & Merit Student Award of University of Chinese Academy of Sciences\\ 
+%\end{tabular}
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE 
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+
+
+
+\section*{Services (学术服务)}
+
+\textbf{Professional Society Membership and Services (学术组织与服务)} 
+
+~\\
+\begin{tabular}{r|p{11cm}}
+	
+	~ & \textbf{Xi'an Jiaotong-Liverpool University (西交利物浦大学)}\\
+	\emph{2022.07--} & \emph{External Mentor (校外导师)}\\
+	\emph{2021.11--} & \emph{Pilotage Mentor (领航导师)}\\
+	\multicolumn{2}{c}{} \\
+	
+	%	\emph{2019.10} & ISGC Student Travel Awards \\
+	%	\multicolumn{2}{c}{} \\
+	
+	
+	~ & \textbf{IEEE}\\
+	\emph{2016.01--} & \emph{Member}\\
+	\emph{2010.01--2015.12} & \emph{Student Member}\\
+	\multicolumn{2}{c}{} \\
+	
+	%------------------------------------------------
+	
+	~ & \textbf{CIE (中国电子学会)} \\
+	\emph{2021.04--} & \emph{Member (会员)}\\
+	\multicolumn{2}{c}{} \\
+	
+	%------------------------------------------------
+	
+	~ & \textbf{JSAAI (江苏省人工智能学会)} \\
+	\emph{2020.11--} & \emph{Member (会员)}\\
+	%	\multicolumn{2}{c}{} \\
+	
+	%------------------------------------------------
+	
+\end{tabular}
+
+~\\
+
+\textbf{Journal Reviewers (期刊审稿人)} 
+\begin{itemize}
+	\item \textit{IEEE Transactions on Signal Processing} Journal, SCI.
+	\item \textit{IEEE Geoscience and Remote Sensing Letters} Journal, SCI.
+	\item \textit{IET Radar, Sonar \& Navigation} Journal, SCI.
+	\item \textit{IET Electronics Letters} Journal, SCI.
+	\item \textit{IET Signal Processing} Journal, SCI.
+	\item \textit{Science China Information Science} Journal, SCI.
+	\item \textit{Cogent Engineering} Journal, SCI.
+	\item \textit{雷达学报} Journal, EI.
+\end{itemize}
+~\\
+\textbf{Organizing Committee Member and Technical Program Chair (学术会议组委会成员及学术主席)} 
+\begin{itemize}
+	\item 2022 International Workshop on Microwave Vision and 3D SAR Imaging (MiViSAR 2022), Suzhou, China, Oct 17-19, 2022.
+\end{itemize}
+~\\
+\textbf{TPC Member / Reviewer (学术会议学术委员会成员 / 审稿人)} 
+%\begin{itemize}
+%%	\item 5th Int. Workshop on Compressed Sensing Theory and its Applications to Radar, Sonar and Remote Sensing (CoSeRa 2018).
+%%	\item 4th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI 2017, Grand Mercure, Yogyakarta, Indonesia).
+%%	\item 1st Annual Saudi Interventional Radiology Society Conference (SIRS 2017, Jeddah, Kingdom of Saudi Arabia).
+%%	\item 4th Int. Workshop on Compressed Sensing Theory and its Applications to Radar, Sonar and Remote Sensing (CoSeRa 2016, Aachen, Germany).
+%%	\item 3rd Int. Workshop on Compressed Sensing Theory and its Applications to Radar, Sonar and Remote Sensing (CoSeRa 2015, Pisa, Italy).
+%%%	\item 1st International Conference on Single Processing and Data Mining (ICSPDM 2015, Istanbul, Turkey).
+%%	\item 15th IEEE International Symposium on Signal Processing and Information Technology (ISSPIT 2015, Abu Dhabi, UAE).
+%%	\item 以及ICSPDM 2015, DISP 2019, FSDM 2018, SIRS 2018, EECSI 2018, ICW-TELKOMNIKA 2018, ICITech 2017, FSDM 2017, ADICS-ESIT 2020, BEEI 2020, SIRS 2019, IJCDS 2020, TELKOMNIKA 2021, SIRS 2020, FSDM 2020, TELKOMNIKA 2021, EECSI 2022...
+%%\item \textbf{二十余个国际学术会议:} 
+%\end{itemize}
+
+~\\
+\begin{tabular}{r|p{12cm}}
+	\emph{2022} & EEET 2022, EECSI 2022, IJCDS, IJECE 2021-22, FSDM 2022. \\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2021} & IJEECS 2021, BEEI 2020-21, ICITech 2021, FSDM 2021, \\
+		& TELKOMNIKA 2021. \\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2020} & CITEI 2020, SIRS 2020, FSDM 2020. \\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2019} & SIRS 2019, DISP 2019 \\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2018} & CoSeRa 2018, SIRS 2018, EECSI 2018, ICW-TELKOMNIKA 2018, FSDM 2018.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2017} & ICITech 2017, EECSI 2017, SIRS 2017, FSDM 2017.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2016} & CoSeRa 2016.\\
+	\multicolumn{2}{c}{} \\
+	
+	\emph{2015} & CoSeRa 2015, ISSPIT 2015, ICSPDM 2015.\\
+\end{tabular}
+
+
+
+
+
+
+\section*{Publications (Bold for Corresponding / First Authorship)}
+
+%%~\\
+%
+%\textsc{Book chapter}
+%
+%\begin{description}
+%\item B. Zhang, W. Hong, Y. Wu, \underline{Z. Zhang} and C. Jiang, ``System Design and Signal Processing of Synthetic Aperture Radar with Sparse Constraint,'' in \textit{Sparse Reconstruction and Compressive Sensing in Remote Sensing}, Springer, to publish.
+%\end{description}
+
+\textsc{Journal Articles}
+
+\begin{enumerate}
+	
+\item \textbf{M. Wang, \underline{Z. Zhang$\ast$}, X. Qiu, S. Gao and Y. Wang, ``ATASI-Net: An Efficient Sparse Reconstruction Network for Tomographic SAR Imaging with Adaptive Threshold,'' IEEE Trans. Geosci. Remote Sens., \emph{under review}}.	
+	
+\item \textbf{R. Shi, \underline{Z. Zhang$\ast$}, X. Qiu, and C. Ding, ``A Novel Gradient Descent Least Squares (GDLS) Algorithm for Efficient Gridless Line Spectrum Estimation with Applications in Tomographic SAR Imaging,'' IEEE Trans. Geosci. Remote Sens., \emph{under review}}.
+
+\item \textbf{J. Li, Z. Xu, Z. Li, \underline{Z. Zhang$\ast$}, B. Zhang, and Y. Wu, ``An Unsupervised CNN-based Multichannel Interferometric Phase Denoising Method Applied to TomoSAR Imaging,''  IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens., \emph{under review}}.
+
+\item \textbf{P. Jiang, \underline{Z. Zhang$\ast$}, and B. Zhang, ``A novel TomoSAR imaging method with few observations based on nested array,''  IET Radar Sonar \& Navigation, \emph{under review}}.
+
+\item \textbf{Y. Zhao, Y. Chen, S. Xie$\ast$, L. Cui, and \underline{Z. Zhang$\ast$}, ``Wide Angle SAR Imaging Method Based on Blind Compressed Sensing,''  Remote Sensing, \emph{under review}}.
+
+\item J. Kang$\ast$, T. Ji, \underline{Z. Zhang}, and R. Fernandez-Beltran, ``SAR Time Series Despeckling via Nonlocal Matrix Decomposition in Logarithm Domain,'' Signal Processing, \emph{under review}.
+
+\item J. Kang$\ast$, F. Tong, Y. Bai, T. Ji, and \underline{Z. Zhang}, ``SAR Time Series Despeckling and Component Analysis Method based on Matrix Decomposition,'' Journal of Radars, \emph{under review}, in Chinese.
+
+\item X. Ding, J. Kang$\ast$, \underline{Z. Zhang}, Y. Huang, J. Liu, and N. Yokoya, ``Coherence-Guided Complex Convolutional Sparse Coding for Interferometric Phase Restoration,'' IEEE Trans. Geosci. Remote Sens., vol. 60, pp. 1–14, 2022, doi: 10.1109/TGRS.2022.3228279.
+
+\item Z. Zhu, J. Kang$\ast$, T. Ji, \underline{Z. Zhang}, and R. Fernandez-Beltran, ``SAR Time-Series Despeckling via Nonlocal Total Variation Regularized Robust PCA,'' IEEE Geosci. Remote Sens. Lett., vol. 19, pp. 1–5, 2022, doi: 10.1109/LGRS.2022.3227187.​
+	
+\item \textbf{Y. Zhao, W. Huang, X. Quan, W.-K. Ling, and \underline{Z. Zhang$\ast$}, ``Data-driven sampling pattern design for sparse spotlight SAR imaging,'' Electron. Lett., vol. 58, no. 24, pp. 920–923, Nov. 2022, doi: 10.1049/ELL2.12650}.
+
+\item \textbf{Z. Xu, B. Zhang, \underline{Z. Zhang$\ast$}, M. Wang, and Y. Wu, ``Nonconvex-Nonlocal Total Variation Regularization Based Joint Feature-Enhanced Sparse SAR Imaging,'' IEEE Geosci. Remote Sens. Lett., vol. 19, pp. 1–1, 2022, doi: 10.1109/lgrs.2022.3222185}.
+
+\item Z. Lyu, X. Qiu$\ast$, \underline{Z. Zhang} and C. Ding, ``Error Analysis of Polarimetric Interferometric SAR under Different Processing Modes In Urban Areas,'', Journal of Radars, 2022, doi: 10.12000/JR22059, in Chinese.
+
+\item \textbf{Z. Xu, G. Zhou, B. Zhang, \underline{Z. Zhang$\ast$} and Y. Wu, ``Sparse Regularization Method Combining SVA for Feature Enhancement of SAR Images,'' Electronics Letters, Jun. 2022, doi: 10.1049/ell2.12509}.
+
+\item \textbf{Y. Zhao, J. Xu, X. Quan, L. Cui and \underline{Z. Zhang$\ast$}, ``$L_1$ Minimization with Perturbation for Off-grid Tomographic SAR Imaging,'' Journal of Radars, vol. 11, no. 1, pp. 52-61, 2022}, in Chinese.
+
+\item B. Du, X. Qiu$\ast$, \underline{Z. Zhang}, B. Lei and C. Ding, ``Tomographic SAR Imaging Method Based on Sparse and Low-rank Structures,'' Journal of Radars, vol. 11, no. 1, pp. 62-70, 2022, in Chinese.
+
+
+\item \textbf{\underline{Z. Zhang$\ast$}, B. Zhang, C. Jiang, X. Liang, L. Chen, W. Hong and Y. Wu, ``The First Airborne Experiment of Sparse Microwave Imaging: Prototype System Design and Result Analysis,'' Available: http://arxiv.org/abs/2110.10675.}
+
+\item \textbf{\underline{Z. Zhang$\ast$}, Y. Wang, and Z. Tian, ``Efficient Two-Dimensional Line Spectrum Estimation Based on Decoupled Atomic Norm Minimization,'' Signal Processing, Vol. 163, pp. 95-106, 2019}.
+
+% \item \textbf{\underline{Z. Zhang$\ast$}, Y. Zhao, C. Jiang, B. Zhang, W. Hong and Y. Wu, ``An Autofocus Algorithm of Sparse Microwave Imaging Based on Phase Recovery Theory,'' Journal of Electronics and Information Technology, accepted, in Chinese}.
+
+
+\item \textbf{\underline{Z. Zhang$\ast$}, B. Zhang, W. Hong and Y. Wu, ``Accelerated Error Compensation Algorithm of Sparse Microwave Imaging with Combination of Map-drift and SAR Raw Data Simulator,'' Journal of Radars, vol. 5, no. 1, pp. 25-34, 2016}, in Chinese.
+
+\item \textbf{B. Zhang, \underline{Z. Zhang$\ast$}, C. Jiang, Y. Zhao, W. Hong and Y. Wu, ``System Design and First Airborne Experiment of Sparse Microwave Imaging Radar: Initial Results,'' Science China Information Sciences (Series F), vol. 58, no. 6, 2015.}
+
+\item C. Jiang$\ast$, Y. Zhao, \underline{Z. Zhang}, B. Zhang, and W. Hong, ``Azimuth Sampling Optimization Scheme for Sparse Microwave Imaging Based on Mutual Coherence Criterion,'' Journal of Electronics and Information Technology, vol. 37, no. 3, 2015.
+
+\item Y. Wu, W. Hong, B. Zhang$\ast$, C. Jiang, \underline{Z. Zhang} and Y. Zhao, ``Current Developments of Sparse Microwave Imaging,'' Journal of Radars, vol.3, no. 4, pp. 383--395, 2014, in Chinese.
+
+\item C. Jiang$\ast$, B. Zhang, J. Fang, \underline{Z. Zhang}, W. Hong, Y. Wu and Z. Xu, ``An efficient Lq regularization algorithm with range-azimuth decoupled for SAR imaging,'' Electronics Letters, vol. 50, no. 3, pp. 204--205, 2014.
+
+\item \textbf{\underline{Z. Zhang$\ast$}, B. Zhang, C. Jiang, Y. Xiang, W. Hong, and Y. Wu, ``Influence factors of sparse microwave imaging radar system performance: approaches to waveform design and platform motion analysis,'' Science China Information Sciences (Series F), vol. 55, no. 10, pp. 2301--2317, 2012}.
+
+\item C. Jiang$\ast$, B. Zhang, \underline{Z. Zhang}, W. Hong, and Y. Wu, ``Experimental results and analysis of sparse microwave imaging from spaceborne radar raw data,'' Science China Information Sciences (Series F), vol. 55, no. 8, pp. 1801--1815, 2012.
+
+% \item \textbf{\underline{Z. Zhang$\ast$}, B. Zhang, C. Jiang, X. Liang, L. Chen, W. Hong and Y. Wu, ``The First Airborne Experiment of Sparse Microwave Imaging: Prototype System Design and Result Analysis,'' to submit.}
+
+\item M. Xie$\ast$, R. Qiao, Z. Pan, D. Li, Y. Qiao and \underline{Z. Zhang}, ``Realization of an Improved Absolute Error Inequality Algorithm on DM642,'' Microelectronics \& Computer, vol. 27, no. 4, pp. 182-185, 2010, in Chinese.
+
+\item T. Wang$\ast$, R. Qiao, Z. Pan, D. Li, Y. Qiao, F. Gao and \underline{Z. Zhang}, ``Research and Application of Vector Quantization Algorithm Based on DM642'', in Proceedings of 2008 TI DSP Contest, pp. 143--161, Publishing House of Electronics Industry, Beijing, 2008, in Chinese. 
+
+~\\
+
+\end{enumerate}
+
+\textsc{Keynotes / Invited Talks}
+
+\begin{enumerate}
+
+\item \textbf{\underline{Z. Zhang$\ast$}, ``无网格稀疏信号处理及其在微波成像中的应用'', in 当稀疏信号处理技术遇见雷达研讨会, Nanjing, 2021, \emph{invited}.}
+
+\end{enumerate}
+
+~\\
+
+\textsc{Invited Peer-reviewed Conference Papers}
+
+\begin{enumerate}
+	
+\item \textbf{\underline{Z. Zhang$\ast$}, M. Jian, Z. Lu, H. Chen, S. James, C. Wang. and R. Gentile, ``Embedded Micro Radar for Pedestrian Detection in Clutter'', in IEEE International Radar Conference (RADAR 2020), 2020, \emph{invited}.}
+   
+\item \textbf{\underline{Z. Zhang$\ast$}, B. Zhang, W. Hong, H. Bi and Y. Wu, ``SAR Imaging of Moving Target in a Sparse Scene Based on Sparse Constraints: Preliminary Experiment Results,'' in 2015 IEEE International Geoscience and Remote Sensing Symposium (IGARSS 2015), \emph{invited}.}
+
+\item \textbf{W. Hong, B. Zhang, \underline{Z. Zhang$\ast$}, C. Jiang, Y. Zhao and Y. Wu, ``Radar Imaging with Sparse Constraint: Principle and Initial Experiment,'' in 10th European Conference on Synthetic Aperture Radar (EuSAR 2014), \emph{invited}}.
+
+
+\end{enumerate}
+
+~\\
+
+\textsc{Peer-reviewed Conference Papers}
+
+\begin{enumerate}
+	
+\item \textbf{P. Jiang, \underline{Z. Zhang$\ast$}, and B. Zhang, ``Efficient Sparse MIMO SAR Imaging with Fast Iterative Method Based on Back Projection and Approximated Observation,'' in 2022 5th International Conference on Electronics	and Electrical Engineering Technology (EEET 2022), 2022, pp. 1–6.}
+
+\item \textbf{S. Gao, \underline{Z. Zhang$\ast$}, B. Zhang, and Y. Wu, ``Gridless Tomographic SAR Imaging Based On Accelerated Atomic Norm Minimization with Efficiency,'' in International Conference on Radar Systems 2022, 2022, pp. 1–6.}
+
+\item \textbf{M. Wang, \underline{Z. Zhang$\ast$}, Y. Wang, S. Gao, and X. Qiu, ``TomoSAR-ALISTA : Efficient TomoSAR Imaging via Deep Unfolded Network,'' in International Conference on Radar Systems 2022, 2022, pp. 1–6.}
+
+\item Z. Xu, G. Zhou, B. Zhang, \underline{Z. Zhang}, and Y. Wu, ``An Accurate Sparse SAR Imaging Method for Joint Feature Enhancement Based on Nonconvex-Nonlocal Total Variation Regularization,'' in 14th European Conference on Synthetic Aperture Radar (EUSAR 2022), 2022, pp. 576–581. [Online]. Available: https://ieeexplore.ieee.org/document/9944320.
+	
+\item M. Liu, J. Li, \underline{Z. Zhang}, B. Zhang, and Y. Wu, ``Azimuth Ambiguities Suppression for Multichannel SAR Imaging Based on L2,q Regularization: Initial Results of Non-sparse Scenario,'' in International Geoscience and Remote Sensing Symposium (IGARSS) 2021, 2021, pp. 3153–3156.
+
+\item B. Du, \underline{Z. Zhang}, X. Qiu, B. Lei, and C. Ding, ``Multi-aspect Tomographic SAR Imaging Approach via Distributed Compressed Sensing and Joint Sparsity,'' in CIE Radar Conference 2021, 2021, pp. 2–5.
+	
+\item {Z. Wang, X. Lin, X. Xiang, \underline{Z. Zhang}, Z. Tian, K. Pham, E. Blasch and G. Chen, ``A hidden chamber detector based on a MIMO SAR'', in Proc. SPIE 11017, Sensors and Systems for Space Applications XII, 1101706, 2019.}	
+	
+\item {P.Xu, Z. Tian, \underline{Z. Zhang} and Y. Wang, ``COKE: Communication-Censored Kernel Learning via random features'', in the 2019 IEEE Data Science Workshop (DSW 2019), 2019.}	
+	
+\item \textbf{\underline{Z. Zhang}, X. Chen and Z. Tian$\ast$, ``A Hybrid Neural Network Framework and Application to Radar Automatic Target Recognition'', in the 6th IEEE Global Conference on Signal and Information Processing (GlobalSIP 2018), 2018.}
+
+\item \textbf{\underline{Z. Zhang} and Z. Tian$\ast$, ``ANM-PhaseLift: Structured Line Spectrum Estimation from Quadratic Measurements'', in 7th IEEE International Workshop on Computational Advances in Multi-Sensor Adaptive Processing (CAMSAP 2017), 2017.}
+
+\item \textbf{Z. Tian, \underline{Z. Zhang$\ast$} and Y. Wang, ``Low-complexity optimization for Two-Dimensional Direction-of-arrival Estimation via Decoupled Atomic Norm Minimizationg'', in 42th International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2017), 2017.}
+
+\item \textbf{\underline{Z. Zhang$\ast$}, Z. Tian, B. Zhang, W. Hong, W. Hong and L. Li, ``Multi-channel SAR Covariance Matrix Estimation Based on Compressive Covariance Sensing'', in 4th International Workshop on Compressive Sensng Theory and its Applications to Radar, Sonar and Remote Sensing (CoSeRa 2016), 2016.}
+
+\item C. Jiang$\ast$, Y. Lin, \underline{Z. Zhang}, B. Zhang and W. Hong, ``WASAR Imaging based on message passing with structured sparse constraint: approach and experiment'', in 3th International Workshop on Compressive Sensng Theory and its Applications to Radar, Sonar and Remote Sensing (CoSeRa 2015), 2015.
+
+\item X. Quan$\ast$, C. Jiang, \underline{Z. Zhang}, B. Zhang and Y. Wu, ``A Study of BP-CAMP Algorithm for SAR Imaging,'' in 2015 IEEE International Geoscience and Remote Sensing Symposium (IGARSS 2015), 2015.
+
+\item X. Quan$\ast$, \underline{Z. Zhang}, C. Jiang, B. Zhang and Y. Wu, ``Comparison of Several Sparse Reconstruction Algorithms in SAR Imaging,'', in IET International Radar Conference 2015, 2015.
+
+\item W. Wang$\ast$, B. Zhang, W. Hong, \underline{Z. Zhang}, Y. Zhao, C. Jiang and H. Bi, `` Polarimetric SAR Tomography of Forested Areas Based on Compressive MUSIC,'' in 2014 IEEE International Geoscience and Remote Sensing Symposium (IGARSS 2014), 2014.
+	
+\item \textbf{\underline{Z. Zhang$\ast$}, Y. Zhao, C. Jiang, B. Zhang, W. Hong and Y. Wu, ``Initial Analysis of SNR / Sampling Rate Constraints in Compressive Sensing based Imaging Radar,'' in 2nd Workshop on Compressive Sensng Applied to Radar (CoSeRa 2013), 2013}.
+
+\item B. Zhang, C. Jiang$\ast$, \underline{Z. Zhang}, J. Fang, Y. Zhao, W. Hong, Y. Wu and Z. Xu, ``Azimuth Ambiguity Suppression for SAR Imaging based on Group Sparse Reconstruction'', in Workshop on Compressive Sensng Applied to Radar (CoSeRa 2013), 2013.
+	
+\item \textbf{\underline{Z. Zhang$\ast$}, Y. Zhao, C. Jiang, B. Zhang, W. Hong and Y. Wu, ``Autofocus of Sparse Microwave Imaging Radar Based on Phase Recovery,'' in 2nd IEEE International Conference on Signal Processing, Communications and Computing (ICSPCC 2013), 2013}.
+
+\item \textbf{\underline{Z. Zhang$\ast$}, B. Zhang, W. Hong, and Y. Wu, ``Waveform Design for Lq Regularization Based Radar Imaging and An Approach to Radar Imaging with Non-moving Platform,'' in 9th European Conference on Synthetic Aperture Radar (EuSAR 2012), 2012}.
+
+\item \textbf{B. Zhang, \underline{Z. Zhang$\ast$}, W. Hong, and Y. Wu, ``Applications of Distributed Compressive Sensing in Multi-channel Synthetic Aperture Radar,'' in 1st Workshop on Compressive Sensng Applied to Radar (CoSeRa 2012), 2012}.
+
+\end{enumerate}
+
+~\\
+\textsc{Patents}
+
+\begin{enumerate}
+
+\item \textbf{\underline{Z. Zhang$\ast$}, Y. Zhao, B. Zhang, W. Hong and Y. Wu, ``一种基于相位恢复的机载稀疏微波成像自聚焦方法,'' CN:201310737404.4}.
+
+\item \textbf{\underline{Z. Zhang$\ast$}, B. Zhang, W. Hong, Y. Wu and X. Quan, ``一种基于PhaseLift的稀疏微波成像自聚焦方法,'' CN:201510227896.1}.
+
+\item B. Zhang, W. Hong, Y. Wu and \underline{Z. Zhang$\ast$}, ``装载于慢速平台上的成像雷达的稀疏微波成像方法及装置,'' CN:201310117111.6.
+
+\item X. Quan$\ast$, B. Zhang, C. Jiang, Y. Zhao, \underline{Z. Zhang} and Y. Wu, ``一种基于稀疏度估计的分维度阈值迭代稀疏微波成像方法,'' CN:201410497525.0.
+
+\item Y. Wu, X. Quan$\ast$, B. Zhang and \underline{Z. Zhang}, ``基于正则化的偏置相位中心天线成像方法,'' CN:201610202747.4.
+
+\end{enumerate}
+
+
+\end{document}
