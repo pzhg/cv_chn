@@ -1,6 +1,7 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.29)  8 DEC 2023 01:53
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.29)  31 DEC 2023 20:47
 entering extended mode
  restricted \write18 enabled.
+ Source specials enabled.
  %&-line parsing enabled.
 **cv_en.tex
 (./cv_en.tex
@@ -854,7 +855,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 135
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Overfull \hbox (38.60797pt too wide) in paragraph at lines 135--153
-[][] 
+[][][] 
  []
 
 
@@ -910,7 +911,7 @@ ne 264.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 298--299
-[]|\TU/lmr/bx/n/10.95 Synthetic Aperture Radar Microwave Vision Three-
+[][]|\TU/lmr/bx/n/10.95 Synthetic Aperture Radar Microwave Vision Three-
  []
 
 [2]
@@ -941,7 +942,7 @@ ne 422.
 
 
 Overfull \hbox (2.71387pt too wide) in paragraph at lines 424--430
-[] 
+[][] 
  []
 
 
@@ -977,6 +978,13 @@ ne 603.
 [5]
 Missing character: There is no ​ (U+200B) in font [lmroman10-regular]:mapping=t
 ex-text;!
+
+Overfull \hbox (5.97583pt too wide) in paragraph at lines 625--626
+\TU/lmr/bx/n/10.95 Geosci. Remote Sens., vol. 62, pp. 1 |\TU/FandolSong-Regular
+(0)/b/n/10.95 –| \TU/lmr/bx/n/10.95 13, 2024, doi: 10.1109/TGRS.2023.3345454.\T
+U/lmr/m/n/10.95 . 
+ []
+
 [6]
 Missing character: There is no ​ (U+200B) in font [lmroman10-regular]:mapping=t
 ex-text;!
@@ -1035,10 +1043,10 @@ Package rerunfilecheck Info: File `cv_en.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22946 strings out of 476683
- 461502 string characters out of 5807574
+ 22945 strings out of 476683
+ 461487 string characters out of 5807574
  1869012 words of memory out of 5000000
- 42917 multiletter control sequences out of 15000+600000
+ 42916 multiletter control sequences out of 15000+600000
  519645 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,8n,106p,10600b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
