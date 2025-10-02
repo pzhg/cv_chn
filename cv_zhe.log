@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.29)  14 SEP 2025 23:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.29)  2 OCT 2025 19:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,41 +1088,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 925--926
  []
 
 
-Overfull \hbox (12.9879pt too wide) in paragraph at lines 937--938
+Overfull \hbox (12.9879pt too wide) in paragraph at lines 943--944
 \TU/lmr/m/n/10.95 Sensing Symposium, IEEE, Jul. 2024, pp. 2004 |\TU/SourceHanSe
 rif(0)/m/n/10.95 –| \TU/lmr/m/n/10.95 2008. doi: 10.1109/igarss53475.2024.10641
 709. 
  []
 
 [13]
-Overfull \hbox (88.4119pt too wide) in paragraph at lines 951--952
+Overfull \hbox (88.4119pt too wide) in paragraph at lines 957--958
 \TU/lmr/bx/n/10.95 mote Sensing Symposium, Jul. 2023, pp. 7953 |\TU/SourceHanSe
 rif(0)/b/n/10.95 –| \TU/lmr/bx/n/10.95 7956. doi: 10.1109/IGARSS52108.2023.1028
 2948\TU/lmr/m/n/10.95 . 
  []
 
 
-Overfull \hbox (47.27136pt too wide) in paragraph at lines 955--956
+Overfull \hbox (47.27136pt too wide) in paragraph at lines 961--962
 \TU/lmr/bx/n/10.95 neering Technology (EEET), Dec. 2022, pp. 34 |\TU/SourceHanS
 erif(0)/b/n/10.95 –| \TU/lmr/bx/n/10.95 40. doi: 10.1109/EEET58130.2022.00014\T
 U/lmr/m/n/10.95 . 
  []
 
 
-Overfull \hbox (38.25847pt too wide) in paragraph at lines 959--960
+Overfull \hbox (38.25847pt too wide) in paragraph at lines 965--966
 \TU/lmr/bx/n/10.95 ence on Radar Systems (RADAR 2022), 2022, pp. 528 |\TU/Sourc
 eHanSerif(0)/b/n/10.95 –| \TU/lmr/bx/n/10.95 533. doi: 10.1049/icp.2023.1289\TU
 /lmr/m/n/10.95 . 
  []
 
-
-Overfull \hbox (7.64427pt too wide) in paragraph at lines 961--962
+[14]
+Overfull \hbox (7.64427pt too wide) in paragraph at lines 967--968
 \TU/lmr/m/n/10.95 2022), 2022, pp. 576 |\TU/SourceHanSerif(0)/m/n/10.95 –| \TU/
 lmr/m/n/10.95 581. [Online]. Available: https://ieeexplore.ieee.org/document/99
 44320. 
  []
 
-[14] [15] [16] (./cv_zhe.aux)
+[15] [16]
+Overfull \hbox (34.55281pt too wide) in paragraph at lines 1036--1037
+[]\TU/SourceHanSerif(0)/m/n/10.95 吴 一 戎\TU/lmr/m/n/10.95 , \TU/SourceHanSerif(0
+)/m/n/10.95 全 相 印\TU/lmr/m/n/10.95 , \TU/SourceHanSerif(0)/m/n/10.95 张 冰 尘 \TU/
+lmr/m/n/10.95 and $[]$, “\TU/SourceHanSerif(0)/m/n/10.95 基 于 正 则 化 的 偏 置 相 位 中 
+心 天 线 成 像 方 法\TU/lmr/m/n/10.95 ,” ZL201610202747.4. 
+ []
+
+[17] (./cv_zhe.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1130,12 +1138,12 @@ Package rerunfilecheck Info: File `cv_zhe.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23118 strings out of 476683
- 471418 string characters out of 5807574
+ 23130 strings out of 476683
+ 472278 string characters out of 5807574
  1889012 words of memory out of 5000000
- 43065 multiletter control sequences out of 15000+600000
+ 43077 multiletter control sequences out of 15000+600000
  519757 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,9n,106p,10651b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on cv_zhe.pdf (16 pages).
+Output written on cv_zhe.pdf (17 pages).
