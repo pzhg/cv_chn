@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.29)  2 OCT 2025 19:40
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.29)  2 OCT 2025 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1081,11 +1081,11 @@ t/9944320.
 Missing character: There is no 翀 (U+7FC0) in font [FandolSong-Regular.otf]/OT:l
 anguage=dflt;!
 
-Overfull \hbox (34.55281pt too wide) in paragraph at lines 964--965
+Overfull \hbox (37.59813pt too wide) in paragraph at lines 964--965
 []\TU/FandolSong-Regular(0)/m/n/10.95 吴 一 戎\TU/lmr/m/n/10.95 , \TU/FandolSong-R
 egular(0)/m/n/10.95 全 相 印\TU/lmr/m/n/10.95 , \TU/FandolSong-Regular(0)/m/n/10.9
-5 张 冰 尘 \TU/lmr/m/n/10.95 and $[]$, “\TU/FandolSong-Regular(0)/m/n/10.95 基 于 正 
-则 化 的 偏 置 相 位 中 心 天 线 成 像 方 法\TU/lmr/m/n/10.95 ,” ZL201610202747.4. 
+5 张 冰 尘\TU/lmr/m/n/10.95 , and $[]$, “\TU/FandolSong-Regular(0)/m/n/10.95 基 于 正
+ 则 化 的 偏 置 相 位 中 心 天 线 成 像 方 法\TU/lmr/m/n/10.95 ,” ZL201610202747.4. 
  []
 
 [16] (./cv_en.aux)

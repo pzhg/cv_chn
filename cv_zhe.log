@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.29)  2 OCT 2025 19:40
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.29)  2 OCT 2025 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1123,11 +1123,11 @@ lmr/m/n/10.95 581. [Online]. Available: https://ieeexplore.ieee.org/document/99
  []
 
 [15] [16]
-Overfull \hbox (34.55281pt too wide) in paragraph at lines 1036--1037
+Overfull \hbox (37.59813pt too wide) in paragraph at lines 1036--1037
 []\TU/SourceHanSerif(0)/m/n/10.95 吴 一 戎\TU/lmr/m/n/10.95 , \TU/SourceHanSerif(0
-)/m/n/10.95 全 相 印\TU/lmr/m/n/10.95 , \TU/SourceHanSerif(0)/m/n/10.95 张 冰 尘 \TU/
-lmr/m/n/10.95 and $[]$, “\TU/SourceHanSerif(0)/m/n/10.95 基 于 正 则 化 的 偏 置 相 位 中 
-心 天 线 成 像 方 法\TU/lmr/m/n/10.95 ,” ZL201610202747.4. 
+)/m/n/10.95 全 相 印\TU/lmr/m/n/10.95 , \TU/SourceHanSerif(0)/m/n/10.95 张 冰 尘\TU/l
+mr/m/n/10.95 , and $[]$, “\TU/SourceHanSerif(0)/m/n/10.95 基 于 正 则 化 的 偏 置 相 位 中
+ 心 天 线 成 像 方 法\TU/lmr/m/n/10.95 ,” ZL201610202747.4. 
  []
 
 [17] (./cv_zhe.aux)
